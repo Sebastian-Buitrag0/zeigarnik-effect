@@ -1,0 +1,258 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.explanation {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Añadido para indicar que es clickeable */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.task-item:hover {
+    background-color: #f9f9f9; /* Ligero cambio al pasar el mouse */
+}
+
+.task-item.incomplete {
+    border-left: 5px solid #ff9800; /* Naranja para incompletas */
+}
+
+.task-item.complete {
+    border-left: 5px solid #4CAF50; /* Verde para completas */
+    text-decoration: line-through;
+    color: #888;
+    cursor: default; /* No más cursor de puntero para completadas */
+}
+
+.task-item.complete:hover {
+    background-color: #fff; /* Sin cambio de hover para completadas */
+}
+
+.status {
+    font-weight: bold;
+    min-width: 80px; /* Espacio para el texto de estado */
+    text-align: right;
+}
+
+.incomplete .status {
+    color: #ff9800;
+}
+
+.complete .status {
+    color: #4CAF50;
+}
+
+.progress-bar-container {
+    width: 100px;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-left: 10px;
+    overflow: hidden; /* Asegura que la barra de progreso no se desborde */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #ff9800;
+    border-radius: 5px;
+    width: 0%; /* Se actualizará con JS */
+    transition: width 0.3s ease; /* Transición suave para la barra */
+}
+
+.web-example {
+    background-color: #fff3e0;
+    border-left: 6px solid #ff9800;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.web-example h3 {
+    margin-top: 0;
+    color: #e65100;
+}
+
+.example-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px dashed #ffcc80;
+    border-radius: 4px;
+}
+
+.example-item p {
+    margin-bottom: 5px;
+}
+
+.example-progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden; /* Para que la barra interna no se salga */
+}
+
+.example-progress-bar {
+    height: 100%;
+    background-color: #4CAF50; /* Verde para progreso */
+    width: 0%; /* Se actualizará con JS o se dejará como ejemplo */
+    text-align: center;
+    color: white;
+    line-height: 20px; /* Centrar texto verticalmente */
+    font-size: 0.8em;
+}
+
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.step {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.step.active {
+    background-color: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
+
+.step.completed {
+    background-color: #e0e0e0;
+    text-decoration: line-through;
+}
+
+.interactive-button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.interactive-button:hover {
+    background-color: #1976D2;
+}
+
+.interactive-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.stepper-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para la nueva sección de comparación */
+.comparison-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
+
+.comparison-section h2 {
+    margin-bottom: 20px;
+}
+
+.practices-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que se ajusten en pantallas pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.example-column {
+    flex: 1; /* Cada columna toma el mismo espacio */
+    min-width: 300px; /* Ancho mínimo antes de envolver */
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.good-practices {
+    background-color: #e6ffed;
+    border: 1px solid #a3d9b1;
+}
+
+.bad-practices {
+    background-color: #ffebee;
+    border: 1px solid #f7c6c7;
+}
+
+.icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.good-icon {
+    color: #2e7d32;
+}
+
+.bad-icon {
+    color: #c62828;
+}
+
+.example-column h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.bad-example {
+    border-color: #ef9a9a; /* Borde más distintivo para malos ejemplos */
+}
+
+.long-form-placeholder {
+    background-color: #fafafa;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+    border-radius: 4px;
+}

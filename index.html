@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Zeigarnik en Acción</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>El Poder del Efecto Zeigarnik 🚀</h1>
+
+        <div class="explanation">
+            <h2>Efecto Zeigarnik: ¿Qué es? 🧠</h2>
+            <p><strong>Idea Clave:</strong> Recordamos mejor las tareas incompletas. La tensión de lo inacabado nos mantiene enfocados y motivados para terminar.</p>
+            <p><strong>Prueba la lista de abajo:</strong> ¿Qué tareas capturan más tu atención?</p>
+        </div>
+
+        <h2>¡Pruébalo! Lista de Tareas Interactiva 👇</h2>
+        <ul id="taskList" class="task-list">
+            <!-- Las tareas se generarán con JavaScript -->
+        </ul>
+
+        <div class="web-example">
+            <h3>Zeigarnik en Acción: Diseño Web Persuasivo 💻</h3>
+            <p class="section-intro">Impulsa a los usuarios mostrando progreso o interrupciones estratégicas.</p>
+
+            <div class="example-item">
+                <h4>Perfil Incompleto: ¡Complétalo!</h4>
+                <span>Tu perfil está al:</span>
+                <div class="example-progress-bar-container">
+                    <div id="profileProgressBar" class="example-progress-bar" style="width: 65%;">65% Completo</div>
+                </div>
+                <button id="incrementProfileBtn" class="interactive-button">Incrementar Perfil</button>
+                <p id="profileCompleteMessage" style="display:none; color: green; font-weight: bold;">¡Perfil Completo!</p>
+                <small><em>¡Motivación para el 100%!</em></small>
+            </div>
+
+            <div class="example-item">
+                <h4>Compra en Pasos: Sigue Avanzando</h4>
+                <div id="purchaseStepper" class="stepper">
+                    <div class="step active" data-step="1">Carrito</div>
+                    <div class="step" data-step="2">Envío</div>
+                    <div class="step" data-step="3">Pago</div>
+                    <div class="step" data-step="4">Confirmación</div>
+                </div>
+                <div class="stepper-controls">
+                    <button id="prevStepBtn" class="interactive-button" disabled>Anterior</button>
+                    <button id="nextStepBtn" class="interactive-button">Siguiente</button>
+                </div>
+                <small><em>¡Claridad que impulsa a finalizar!</em></small>
+            </div>
+
+            <div class="example-item">
+                <h4>No lo Dejes a Medias: Retoma Fácil</h4>
+                <p><strong>Ej. Netflix:</strong> Continuar viendo "Serie Interesante" (Episodio 3, 25:10)</p>
+                <small><em>¡La interrupción crea el deseo de volver!</em></small>
+            </div>
+        </div>
+
+        <div class="comparison-section">
+            <h2>Zeigarnik: ✅ Buenas Prácticas vs. ❌ Malas Prácticas</h2>
+
+            <div class="practices-container">
+                <div class="good-practices example-column">
+                    <h3><span class="icon good-icon">✔</span> ACIERTOS: Así SÍ se usa</h3>
+                    
+                    <div class="example-item">
+                        <h4>Progreso Visible</h4>
+                        <p class="practice-summary">Barras de progreso, steppers.</p>
+                        <div class="example-progress-bar-container" style="margin-top:5px;">
+                            <div class="example-progress-bar" style="width: 75%; background-color: #4CAF50; color: white;">75%</div>
+                        </div>
+                        <small><em>Motiva a completar.</em></small>
+                    </div>
+
+                    <div class="example-item">
+                        <h4>Retomar Fácilmente</h4>
+                        <p class="practice-summary">"Continuar viendo", carritos guardados.</p>
+                        <small><em>Resuelve la tarea mental pendiente.</em></small>
+                    </div>
+
+                     <div class="example-item">
+                        <h4>Avance por Etapas</h4>
+                        <p class="practice-summary">Cursos/módulos con checkmarks.</p>
+                        <div class="stepper mini-stepper" style="margin-top:5px;">
+                            <div class="step completed">M1 ✔</div>
+                            <div class="step active">M2</div>
+                            <div class="step">M3</div>
+                        </div>
+                        <small><em>Incentiva a seguir.</em></small>
+                    </div>
+                </div>
+
+                <div class="bad-practices example-column">
+                    <h3><span class="icon bad-icon">❌</span> ERRORES: Así NO se usa</h3>
+                    
+                    <div class="example-item bad-example">
+                        <h4>Formularios Interminables</h4>
+                        <p class="practice-summary">Sin indicación de progreso claro.</p>
+                        <div class="long-form-placeholder" style="font-size: 0.8em; padding: 5px;">
+                            <p>Campo 1... Campo 2... Campo 3... (¿cuántos más?)</p>
+                        </div>
+                        <small><em>Abrumador, no hay "luz al final".</em></small>
+                    </div>
+
+                    <div class="example-item bad-example">
+                        <h4>Progreso Falso/Engañoso</h4>
+                        <p class="practice-summary">"99% completo" cuando falta mucho.</p>
+                        <small><em>Genera desconfianza.</em></small>
+                    </div>
+
+                    <div class="example-item bad-example">
+                        <h4>Olvidar el Progreso</h4>
+                        <p class="practice-summary">No guardar datos si el usuario vuelve.</p>
+                        <small><em>Frustrante, anula el efecto.</em></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
